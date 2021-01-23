@@ -1,4 +1,4 @@
-using module ..\Classes\Chainlink.psm1
+using module ..\Classes\TreePrinter.psm1
 function new-tree {
     
     [CmdletBinding()]
@@ -15,8 +15,6 @@ function new-tree {
         $children = . $script $p.n
         $dispchildren = . $displayscript $p.n
             
-        log @($dispchildren).count
-        log @($children).count
         if (@($children).Count -eq 0) {
             return
         }

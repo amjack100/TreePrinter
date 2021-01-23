@@ -1,5 +1,6 @@
+#Requires -Version 6
 
-$Public = Get-Childitem $PSScriptRoot\Library 
+$Public = Get-Childitem $PSScriptRoot\Public
 
 foreach ($item in $Public) {
     . (Get-Item $item).FullName
